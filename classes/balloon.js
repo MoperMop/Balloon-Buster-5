@@ -1,37 +1,38 @@
 class Balloon{
   constructor(x,y,color){
-    this.balloon = createSprite(x,y,21,52);
-    this.balloon.velocityY = -3;
-    this.balloon.lifetime = this.balloon.y/3;
-    balloonGroup.push(this.balloon);
+    this.sprite = createSprite(x,y,21,52);
+    this.sprite.velocityY = -3;
+    this.sprite.lifetime = this.sprite.y/3;
+    balloonGroup.push(this.sprite);
+    this.sprite.color = color;
     switch(color){
       case 1:
-        this.balloon.addImage("blueBalloon", blueBalloonImage);
-        this.balloon.scale = 0.12;
+        this.sprite.addImage("blueBalloon", blueBalloonImage);
+        this.sprite.scale = 0.18;
 
 
-        this.balloon.setCollider("circle", 0, -50, 245);
+        this.sprite.setCollider("circle", 0, -50, 245);
       break;
       case 2:
-        this.balloon.addImage("greenBalloon", greenBalloonImage);
-        this.balloon.scale = 0.107;
+        this.sprite.addImage("greenBalloon", greenBalloonImage);
+        this.sprite.scale = 0.125;
 
 
-        this.balloon.setCollider("circle", 0, -122.5, 285);
+        this.sprite.setCollider("circle", 0, -122.5, 285);
       break;
       case 3:
-        this.balloon.addImage("redBalloon", redBalloonImage);
-        this.balloon.scale = 0.115;
+        this.sprite.addImage("redBalloon", redBalloonImage);
+        this.sprite.scale = 0.11;
 
 
-        this.balloon.setCollider("circle", 0, -115, 275);
+        this.sprite.setCollider("circle", 0, -115, 275);
       break;
       case 4:
-        this.balloon.addImage("pinkBalloon", pinkBalloonImage)
-        this.balloon.scale = 1.45;
+        this.sprite.addImage("pinkBalloon", pinkBalloonImage);
+        this.sprite.scale = 1.1;
 
 
-        this.balloon.setCollider("circle", 0, -8.5, 22)
+        this.sprite.setCollider("circle", 0, -8.5, 22)
       break;
     }
   }

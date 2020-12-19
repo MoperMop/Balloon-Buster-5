@@ -66,7 +66,23 @@ function draw() {
     if(arrow.x <= -60){arrow.lifetime = 0;}
     for(var balloons = balloonGroup.length-1; balloons > -1; balloons = balloons-1){
       if(balloonGroup[balloons].isTouching(arrow)){
-        score = score+1;
+        switch(balloonGroup[balloons].color){
+          case 1:
+            score = score+1;
+          break;
+          case 2:
+            score = score+3;
+          break;
+          case 3:
+            score = score+5;
+          break;
+          case 4:
+            score = score+10;
+          break;
+          default:
+            console.log("Error " + balloonGroup[balloons].color);
+          break;
+        }
         balloonGroup[balloons].lifetime = 0;
       }
     }

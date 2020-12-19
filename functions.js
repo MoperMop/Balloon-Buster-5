@@ -6,7 +6,7 @@ function createBalloon(){
 function fireArrow(){
   if(arrow != null){arrow.lifetime = 0;}
   arrow = createSprite(500,bow.y,5,30);
-  arrow.addImage("arrow", arrowImage);
+  arrow.addImage("arrow", arrowImage); 
   arrow.scale = 0.375;
   arrow.velocityX = -10;
   arrow.setCollider("rectangle", -110, -5, 30, 45);
